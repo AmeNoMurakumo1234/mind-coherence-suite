@@ -2,6 +2,17 @@
 
 All notable changes to the Mind Coherence plugin.
 
+## 1.4.0 - 2026-06-19
+
+- New skill **mind-onboarding**: a one-time runbook for auditing an EXISTING memory corpus to
+  a clean base state when adopting the suite (most installs land on a pile of pre-existing
+  memory that predates these disciplines). Read-only audit -> proposed plan -> human ratifies
+  -> apply in small reversible steps: inventory + classify, reconcile index vs file bodies,
+  move in-flight status out of memory, convert believed-false-but-kept items to anti-facts,
+  de-dup, calibrate confidence selectively, then verify (no orphan / dangling index entries).
+  README gains an "Onboarding" section. Distilled from running this exact audit on a real
+  ~60-item corpus, where the key lesson was: the index drifts from the bodies, trust the body.
+
 ## 1.3.0 - 2026-06-19
 
 - `mind-belief-vs-knowledge`: new principle - **Cromwell binds the CONTINGENT, not the

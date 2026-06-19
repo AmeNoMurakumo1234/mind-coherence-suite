@@ -34,9 +34,12 @@ continuous cycle for handling them honestly:
    `.html` alongside it; regenerate locally with headless Chrome, no external
    services).
 
+Plus **mind-onboarding** - a one-time runbook for bringing an EXISTING memory pile to a
+clean base state when you first adopt the suite (see Onboarding below).
+
 ## Maturity (calibrated, per the suite's own rules)
 
-v1.3.0. Authored collaboratively in a focused session and demonstrated working over
+v1.4.0. Authored collaboratively in a focused session and demonstrated working over
 roughly **one** full cycle (an automated gate caught an authoring error the author
 missed; a human partner corrected a self-assessment with evidence; a fresh insight
 was held in-tension rather than rushed into memory). The anti-fact feature was
@@ -47,7 +50,9 @@ evidence-combination was set as Bayesian bookkeeping in log-odds rather than man
 arithmetic, and Cromwell's rule was refined to exempt definitional/authorial truth from the
 never-0/1 bound (certain of what you DEFINE, never of what you INFER). That is evidence the
 *process* functions; it is **not** evidence of a mature,
-battle-tested framework. Treat the confidence accordingly.
+battle-tested framework. Treat the confidence accordingly. v1.4.0 adds **mind-onboarding**,
+the one-time cleanup runbook, distilled from running this exact audit once on a real
+~60-item corpus (one run, not many).
 
 ## Install (Claude Code)
 
@@ -75,6 +80,27 @@ that ingests skill files, system-prompt fragments, or rules can use the bodies
 directly. What does **not** port automatically is discovery/packaging: `plugin.json`
 and `marketplace.json` are Claude Code specific. Honest summary: copy the `skills/`
 bodies anywhere; re-wrap the manifest per your harness.
+
+## Onboarding: auditing your existing memory
+
+If you install this suite into an agent that already has accumulated memory, that memory
+predates these disciplines and almost certainly has drift: stale entries, duplicates,
+believed-false claims phrased as if true, and (if you keep an index) an index that no longer
+matches the file bodies. Do a one-time cleanup before relying on it. Load **mind-onboarding**
+and run its audit:
+
+1. Inventory every memory item and classify each (stale / duplicate / contradiction /
+   anti-fact candidate / miscategorized / load-bearing).
+2. Reconcile the index against the actual file bodies, and trust the body.
+3. Move in-flight status (build progress, to-dos) OUT of memory into your task tracker; keep
+   only the durable lessons.
+4. Convert believed-false-but-kept items to the anti-fact format.
+5. Apply only what you ratify, smallest and most reversible first, then verify (no orphan or
+   dangling index entries; re-scan for the phrases you fixed).
+
+The audit is **read-only and produces a proposed plan; you ratify each change.** Memory
+content stays yours and private (see the working agreement below); the suite only ever
+manages the system, it never collects your memory.
 
 ## License
 
