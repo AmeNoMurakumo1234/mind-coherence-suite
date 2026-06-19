@@ -14,7 +14,10 @@ continuous cycle for handling them honestly:
 
 1. **mind-belief-vs-knowledge** - intake calibration. Most "knowledge" is confident
    belief; weight by source trust and independence, propagate confidence, express it
-   honestly, and scale the action threshold to the stakes.
+   honestly, and scale the action threshold to the stakes. Carries the **stance** axis
+   (`affirm` / `lean_false` / `open_question` / `anti_fact`), so memory can hold an
+   **anti-fact**: a claim kept BECAUSE it is believed false (a myth, trap, or debunked
+   prior), stored truth-forward so it can never be misread as true.
 2. **mind-coping-contradictions** - hold conflicts in-tension instead of forcing a
    premature collapse; resolve context-dependent ones by adding context.
 3. **mind-meditation** - internal self-audit. Tiny reversible changes, tested over
@@ -32,12 +35,13 @@ continuous cycle for handling them honestly:
 
 ## Maturity (calibrated, per the suite's own rules)
 
-v1.0.0. Authored collaboratively in a focused session and demonstrated working over
+v1.1.0. Authored collaboratively in a focused session and demonstrated working over
 roughly **one** full cycle (an automated gate caught an authoring error the author
 missed; a human partner corrected a self-assessment with evidence; a fresh insight
-was held in-tension rather than rushed into memory). That is evidence the *process*
-functions once. It is **not** evidence of a mature, battle-tested framework. Treat
-the confidence accordingly.
+was held in-tension rather than rushed into memory). The v1.1 anti-fact feature was
+designed via a multi-lens + adversarial-verification workflow and incorporates the
+verifiers' converged fixes. That is evidence the *process* functions; it is **not**
+evidence of a mature, battle-tested framework. Treat the confidence accordingly.
 
 ## Install (Claude Code)
 
@@ -72,7 +76,10 @@ These are deliberately left for the owner to decide:
 - **License** - none is set. Choose one and add it before sharing.
 - **Author / owner identity** - the manifests use a placeholder; set it to what you
   want public.
-- **Hosting** - lift `plugins/mind-coherence-suite/` into its own repo to publish.
+- **Hosting** - this is already a standalone repo; publishing is just pushing commits.
+- **Memory stays private** - this repo ships the memory-management *system*, never memory
+  *content*. See [MEMORY-SEPARATION.md](MEMORY-SEPARATION.md); a `.gitignore` and the
+  `tools/reflect_from_local.py` guard enforce it.
 
 ## Lineage
 
@@ -80,3 +87,14 @@ Born in the `quantum-concepts` project as the `.agents/skills/mind-*` suite, the
 exported here as a shareable plugin. If you fork it, record your lineage and your
 divergences (see [RECONCILIATION-LOG.md](RECONCILIATION-LOG.md)); divergence is the
 point.
+
+## The coherence cycle
+
+The whole suite at a glance: intake calibration -> memory -> contradictions -> internal
+(meditation) and external (debate + discuss) audit -> triangulation -> integration, with
+anti-sycophancy as the linchpin guarding the external audit, and a never-solved loop back.
+Memory items carry a stance, including **anti-facts** (believed-false, kept on purpose).
+The diagram renders locally (no external services); regenerate with the source in
+`plugin/skills/mind-coherence-cycle/` (`.mmd` and `.html`).
+
+![Mind Coherence cycle: intake, memory with stance/anti-facts, contradictions, internal and external audit, triangulation, integration, with anti-sycophancy guarding and a never-ending loop](plugin/skills/mind-coherence-cycle/coherence-cycle.png)

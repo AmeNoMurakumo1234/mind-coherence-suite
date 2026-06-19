@@ -1,0 +1,13 @@
+# This plugin ships the SYSTEM for managing memory, NEVER memory CONTENT.
+# Refuse memory-shaped paths so private entries can never be committed here.
+# (See MEMORY-SEPARATION.md.)
+memory/
+**/memory/
+*.memory.md
+MEMORY.md
+
+# Local scratch / build artifacts
+.agents/tmp/
+__pycache__/
+*.pyc
+*.log

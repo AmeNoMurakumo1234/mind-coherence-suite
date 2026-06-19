@@ -2,6 +2,29 @@
 
 All notable changes to the Mind Coherence plugin.
 
+## 1.1.0 - 2026-06-19
+
+Adds the **anti-fact** feature and the fork-and-diverge tooling.
+
+- `mind-belief-vs-knowledge`: new **stance axis** (`affirm` / `lean_false` /
+  `open_question` / `anti_fact`), orthogonal to `metadata.type`. Confidence is fixed as
+  P(claim-as-written is TRUE) on one 0-1 scale. An **anti-fact** is a claim kept BECAUSE
+  it is believed false (myth / debunked_prior / trap); safety lives in truth-forward file
+  text (correction-first, truth-forward name, `[ANTI-FACT]` index line), not in tooling.
+  Flips are gated against capitulation.
+- `mind-coping-contradictions`: handles a fact-vs-anti-fact contradiction explicitly.
+- `mind-coherence-cycle`: diagram regenerated to show the stance spectrum and anti-facts.
+- Tooling: `tools/reflect_from_local.py` (curated local -> repo upstreaming, skills only)
+  and `tools/validate_anti_facts.py` (lints anti-fact invariants in a memory dir).
+- `MEMORY-SEPARATION.md` + `.gitignore`: the plugin ships the memory-management SYSTEM,
+  never memory CONTENT.
+
+Design note: produced via a multi-lens + adversarial-verification workflow; the
+verifiers' converged fixes (one confidence scale; stance not a 5th type; safety in file
+text; drop the unresolved `scope` field; gate flips) are incorporated. Per the project's
+propose-options-decide-greenlight rule, no bulk memory backfill of real anti-facts is
+included; only the FORMAT ships.
+
 ## 1.0.0 - 2026-06-19
 
 Initial seed.

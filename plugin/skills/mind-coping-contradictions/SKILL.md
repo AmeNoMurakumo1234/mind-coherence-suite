@@ -22,6 +22,7 @@ As CONTEXT + MEMORY grow, new data will contradict what is already stored. Contr
 2. **Tension has a cost, and that is fine.** Each unresolved contradiction carries ongoing load (for an AI: risk of asserting whichever side was retrieved). Accept the load rather than fake-resolving it.
 3. **Most contradictions are context-dependent.** "True in situation A, false in B" is the common case. The resolution is usually to add the discriminating CONTEXT, not to delete a side.
 4. **Mark genuine conflicts IN-TENSION.** In memory, flag the conflict explicitly so retrieval cannot silently pick a winner and so a future audit knows work remains.
+5. **A fact vs an anti-fact is a head-on contradiction.** If incoming data asserts X while an `anti_fact` (see `mind-belief-vs-knowledge`) records X as believed-false, resolve it explicitly: demote the anti-fact, hold both in-tension, or flip it through the gate. Never just silently lower a number, that discards the cautionary value of a debunked claim.
 
 ## Procedure
 
@@ -34,3 +35,4 @@ As CONTEXT + MEMORY grow, new data will contradict what is already stored. Contr
 - Collapsing a contradiction just to relieve discomfort (premature certainty).
 - Deleting one side when both were context-true (losing real nuance).
 - Letting an unflagged conflict drive inconsistent behavior across sessions.
+- Silently downgrading a contradicted fact's confidence instead of deciding fact-vs-anti-fact, which throws away a debunked claim's warning value.
