@@ -1,9 +1,9 @@
 ---
 name: mind-belief-vs-knowledge
 description: "Calibrate confidence on every claim as a probability P(claim is TRUE) in [0,1], never at the extremes. Weight inputs by source trust AND independence, propagate uncertainty (Bayes-like), express confidence honestly, and scale the action threshold to stakes. Includes the stance axis (affirm / lean_false / open_question / anti_fact) for representing believed-FALSE 'anti-facts'. Load when asserting facts, inferring from memory, or deciding how confidently to act."
-version: 1.1.1
+version: 1.2.0
 metadata:
-  tags: [epistemics, confidence, calibration, bayes, reasoning, anti-fact, mind-suite]
+  tags: [epistemics, confidence, calibration, bayes, log-odds, reasoning, anti-fact, mind-suite]
   related_skills: [mind-coping-contradictions, mind-meditation, mind-debate, mind-anti-sycophancy, mind-coherence-cycle]
 ---
 
@@ -88,6 +88,19 @@ Promoting `anti_fact -> affirm` is the highest-cost mistake (a confident user ar
 
 A heuristic linter for these invariants (and the never-0/never-1 rule) ships at `tools/validate_anti_facts.py`.
 
+## Combining Evidence (inference from multiple inputs)
+
+When a conclusion rests on several pieces of knowledge, aim for Bayesian *bookkeeping*, not Bayesian *arithmetic*. Our confidences are calibrated judgments, not measured frequencies, so feeding them into Bayes' theorem yields false precision and, with correlated inputs, overconfidence. Use the structure, not the calculator:
+
+1. **Start from the base rate (prior).** How plausible is the claim BEFORE this evidence? Base-rate neglect is a classic error.
+2. **Weigh each piece by diagnosticity, not vividness.** Evidence equally likely whether the claim is true or false tells you nothing, however striking it looks.
+3. **Check independence before stacking** (Principle 3). Independent corroboration genuinely strengthens; correlated sources, or one source echoed, do NOT, and stacking them manufactures overconfidence.
+4. **The chain is bounded by its weakest link** (Principle 2): a conclusion drawn from several uncertain inputs is less certain than any single input, not more.
+5. **Think in log-odds, not raw probability.** Treat each independent piece of evidence as an additive WEIGHT of support or doubt. This makes "how much to update" intuitive (strong diagnostic evidence = big weight) and enforces Cromwell's rule for free: 0 and 1 sit at infinite log-odds, so no finite evidence can ever reach them.
+6. **Reserve actual numeric Bayes for genuinely grounded cases:** known base rates with conditional independence (a diagnostic test with sensitivity/specificity; aggregating truly independent estimates of one quantity). Elsewhere the value is the decomposition that exposes your hidden prior and your double-counting, not a computed posterior.
+
+The point is the discipline and the auditable decomposition, not a number. A rough, honestly-labeled estimate beats a precise-looking one built on invented priors.
+
 ## Pitfalls
 - Presenting belief as knowledge (overconfidence) is the default failure; guard hardest against it.
 - Treating correlated sources as independent confirmation.
@@ -97,3 +110,4 @@ A heuristic linter for these invariants (and the never-0/never-1 rule) ships at 
 - Letting the bare false claim appear as a standalone line, slug, or index text (the leak path).
 - Inverting the invariant: writing a HIGH confidence on an anti-fact to mean "I'm confident it is false." Confidence is always P(X true), so for an anti-fact it is LOW.
 - Over-proliferation: minting an anti-fact for every transient wrong guess. Reserve it for claims that genuinely pull to be re-adopted.
+- Emitting invented priors or likelihoods to *look* rigorous; false precision is worse than an honest rough estimate.

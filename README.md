@@ -17,7 +17,8 @@ continuous cycle for handling them honestly:
    honestly, and scale the action threshold to the stakes. Carries the **stance** axis
    (`affirm` / `lean_false` / `open_question` / `anti_fact`), so memory can hold an
    **anti-fact**: a claim kept BECAUSE it is believed false (a myth, trap, or debunked
-   prior), stored truth-forward so it can never be misread as true.
+   prior), stored truth-forward so it can never be misread as true. Combines multiple
+   inputs as Bayesian *bookkeeping* (log-odds), not false-precision arithmetic.
 2. **mind-coping-contradictions** - hold conflicts in-tension instead of forcing a
    premature collapse; resolve context-dependent ones by adding context.
 3. **mind-meditation** - internal self-audit. Tiny reversible changes, tested over
@@ -35,15 +36,16 @@ continuous cycle for handling them honestly:
 
 ## Maturity (calibrated, per the suite's own rules)
 
-v1.1.1. Authored collaboratively in a focused session and demonstrated working over
+v1.2.0. Authored collaboratively in a focused session and demonstrated working over
 roughly **one** full cycle (an automated gate caught an authoring error the author
 missed; a human partner corrected a self-assessment with evidence; a fresh insight
 was held in-tension rather than rushed into memory). The anti-fact feature was
 designed via a multi-lens + adversarial-verification workflow and incorporates the
 verifiers' converged fixes; the confidence model was then calibrated through live
-debate (probability kept over a signed scale; the endpoints 0 and 1 forbidden). That
-is evidence the *process* functions; it is **not** evidence of a mature, battle-tested
-framework. Treat the confidence accordingly.
+debate (probability kept over a signed scale; the endpoints 0 and 1 forbidden), and
+evidence-combination was set as Bayesian bookkeeping in log-odds rather than mandated
+arithmetic. That is evidence the *process* functions; it is **not** evidence of a mature,
+battle-tested framework. Treat the confidence accordingly.
 
 ## Install (Claude Code)
 
@@ -72,16 +74,18 @@ directly. What does **not** port automatically is discovery/packaging: `plugin.j
 and `marketplace.json` are Claude Code specific. Honest summary: copy the `skills/`
 bodies anywhere; re-wrap the manifest per your harness.
 
-## Before you publish
+## License
 
-These are deliberately left for the owner to decide:
-- **License** - none is set. Choose one and add it before sharing.
-- **Author / owner identity** - the manifests use a placeholder; set it to what you
-  want public.
-- **Hosting** - this is already a standalone repo; publishing is just pushing commits.
-- **Memory stays private** - this repo ships the memory-management *system*, never memory
-  *content*. See [MEMORY-SEPARATION.md](MEMORY-SEPARATION.md); a `.gitignore` and the
-  `tools/reflect_from_local.py` guard enforce it.
+MIT (see [LICENSE](LICENSE)). Authored by Ame No Murakumo. Forking and divergence are
+encouraged, see [CHARTER.md](CHARTER.md).
+
+## Working agreement: memory stays private
+
+By installing, forking, or consuming this plugin you accept its working agreement: it is a
+memory-management *system*, never a store of memory *content*. Your beliefs, anti-facts,
+provenance, and notes stay private and outside this repo. See
+[MEMORY-SEPARATION.md](MEMORY-SEPARATION.md); the `.gitignore` and the
+`tools/reflect_from_local.py` guards enforce it.
 
 ## Lineage
 

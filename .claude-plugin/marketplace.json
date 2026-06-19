@@ -1,16 +1,18 @@
 {
   "name": "mind-coherence-suite",
   "owner": {
-    "name": "Murakumo"
+    "name": "Ame No Murakumo"
   },
   "description": "Marketplace hosting the Mind Coherence Suite: a portable, fork-and-diverge epistemic-discipline skill suite for AI agents.",
   "plugins": [
     {
       "name": "mind-coherence",
       "source": "./plugin",
-      "description": "Belief-vs-knowledge calibration, holding contradictions, internal + external audit, and anti-sycophancy, as one continuous coherence cycle. Designed to be forked and diverged, not uniformly adopted.",
-      "version": "1.0.0",
-      "keywords": ["epistemics", "anti-sycophancy", "calibration", "reasoning", "agent-discipline"]
+      "description": "Belief-vs-knowledge calibration (with anti-facts), evidence combination as Bayesian bookkeeping, holding contradictions, internal + external audit, and anti-sycophancy, as one continuous coherence cycle. Designed to be forked and diverged, not uniformly adopted.",
+      "version": "1.2.0",
+      "author": { "name": "Ame No Murakumo" },
+      "license": "MIT",
+      "keywords": ["epistemics", "anti-sycophancy", "calibration", "anti-fact", "reasoning", "agent-discipline"]
     }
   ]
 }

@@ -2,6 +2,19 @@
 
 All notable changes to the Mind Coherence plugin.
 
+## 1.2.0 - 2026-06-19
+
+- `mind-belief-vs-knowledge`: new **Combining Evidence** section - Bayesian *bookkeeping*,
+  not arithmetic. Base rate first; weigh by diagnosticity; check independence before
+  stacking; chain bounded by its weakest link; **think in log-odds** (which enforces the
+  never-0/1 Cromwell rule for free); reserve numeric Bayes for genuinely grounded cases.
+  Decided via debate: mandated posterior computation was declined (inputs are judgments,
+  not frequencies -> false precision; correlated inputs -> overconfidence).
+- **LICENSE: MIT.** Author set to **Ame No Murakumo**; manifests updated.
+- Memory privacy elevated to a first-class **Working Agreement** with all consumers
+  (README section + `MEMORY-SEPARATION.md`).
+- README: removed the "Before you publish" section (resolved).
+
 ## 1.1.1 - 2026-06-19
 
 Calibration refinement to the confidence model (decided via debate, not capitulation).
