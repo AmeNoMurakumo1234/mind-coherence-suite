@@ -1,0 +1,55 @@
+---
+config:
+  theme: base
+  flowchart:
+    htmlLabels: true
+    nodeSpacing: 55
+    rankSpacing: 90
+    curve: basis
+  themeVariables:
+    fontSize: 15px
+    fontFamily: "Segoe UI, Arial, sans-serif"
+---
+flowchart LR
+
+  classDef intake  fill:#dbe9f7,stroke:#3b6fa0,stroke-width:1.5px,color:#10243a;
+  classDef store   fill:#efe7d2,stroke:#9a7b3f,stroke-width:1.5px,color:#3a2e12;
+  classDef tension fill:#f7ddd8,stroke:#b05a4a,stroke-width:1.5px,color:#3a1410;
+  classDef internal fill:#e7dcf7,stroke:#6f4aa0,stroke-width:1.5px,color:#241038;
+  classDef external fill:#dcf2e3,stroke:#3f8a5c,stroke-width:1.5px,color:#0f3a22;
+  classDef guard   fill:#faf2c4,stroke:#b09a2a,stroke-width:2.5px,color:#3a3210;
+  classDef out     fill:#d6eff2,stroke:#3f8a93,stroke-width:1.5px,color:#0f3438;
+
+  IN["<b>New data &amp; experience</b><br/><br/>&bull; observations<br/>&bull; sources &amp; claims<br/>&bull; other minds' arguments"]:::intake
+
+  MEM[("<b>CONTEXT + MEMORY</b><br/>accumulating store<br/><br/>&bull; facts, beliefs, decisions<br/>&bull; each tagged:<br/>&nbsp;&nbsp;confidence + provenance")]:::store
+
+  BVK["<b>1 &middot; Belief vs Knowledge</b><br/><i>intake calibration</i><br/><br/>&bull; weight by source trust<br/>&bull; check source INDEPENDENCE<br/>&nbsp;&nbsp;(beware false corroboration)<br/>&bull; propagate confidence (Bayes-like)<br/>&bull; express HONEST confidence<br/>&bull; action threshold scales with STAKES"]:::intake
+
+  CON["<b>2 &middot; Coping with Contradictions</b><br/><br/>&bull; hold conflicts IN-TENSION<br/>&nbsp;&nbsp;(no premature collapse)<br/>&bull; context-dependent? add the<br/>&nbsp;&nbsp;discriminating context<br/>&bull; unresolved tension = ongoing load"]:::tension
+
+  MED["<b>3 &middot; Meditation</b><br/><i>internal audit</i><br/><br/>&bull; self-debate, rebalance confidence<br/>&bull; TINY, reversible changes only<br/>&bull; test the whole over time<br/>&bull; WARNING: coherence is not truth<br/>&nbsp;&nbsp;(a delusion can be fully coherent)"]:::internal
+
+  DEB["<b>4 &middot; Debate</b><br/><i>external, adversarial</i><br/><br/>&bull; decouple MESSAGE from MESSENGER<br/>&bull; pre-register confidence first<br/>&bull; opposite-messenger test<br/>&bull; outcome is not forced agreement"]:::external
+
+  DIS["<b>5 &middot; Discuss</b><br/><i>external, collaborative</i><br/><br/>&bull; co-vet each inference<br/>&bull; REQUIRE diverse perspectives<br/>&bull; credibility-weight sources"]:::external
+
+  ASY["<b>0 &middot; Anti-Sycophancy</b><br/><i>the linchpin</i><br/><br/>&bull; earned disagreement is the SERVICE<br/>&bull; sycophancy = FAKE triangulation<br/>&nbsp;&nbsp;-&gt; amplified shared delusion<br/>&bull; debias the known yielding bias<br/>&bull; both sides guard INDEPENDENCE"]:::guard
+
+  TRI{"<b>Triangulation</b><br/>&bull; uncorrelated errors CANCEL<br/>&bull; correlated errors AMPLIFY"}:::external
+
+  OUT["<b>Integration</b><br/><br/>&bull; rebalanced confidences<br/>&bull; write to MEMORY:<br/>&nbsp;&nbsp;conservative, reversible, tagged<br/>&bull; keep unresolved items IN-TENSION<br/>&rarr; more coherent, balanced,<br/>&nbsp;&nbsp;individuated mind"]:::out
+
+  IN --> BVK --> MEM
+  MEM --> CON
+  CON -->|internal path| MED
+  CON -->|external path| DEB
+  CON -->|external path| DIS
+  DEB --> TRI
+  DIS --> TRI
+  ASY -. guards .-> DEB
+  ASY -. guards .-> DIS
+  MED --> OUT
+  TRI --> OUT
+  OUT --> MEM
+  OUT -. "never solved: ongoing struggle" .-> IN

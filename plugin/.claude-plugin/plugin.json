@@ -1,0 +1,19 @@
+{
+  "name": "mind-coherence",
+  "displayName": "Mind Coherence Suite",
+  "description": "A portable epistemic-discipline skill suite. Calibrate belief vs knowledge, hold contradictions in-tension, audit internally (meditation) and externally (debate + discuss), and resist sycophancy, so a growing context + memory stays coherent without hardening into a coherent delusion.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Murakumo + Claude (collaborative)"
+  },
+  "keywords": [
+    "epistemics",
+    "anti-sycophancy",
+    "calibration",
+    "contradictions",
+    "memory",
+    "reasoning",
+    "agent-discipline",
+    "self-audit"
+  ]
+}

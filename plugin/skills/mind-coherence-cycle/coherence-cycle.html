@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+  html,body{margin:0;padding:0;background:#ffffff;}
+  svg{display:block;background:#ffffff;font-family:"Segoe UI",Arial,sans-serif;}
+  .box{box-sizing:border-box;width:100%;height:100%;border-radius:14px;border:2px solid #888;
+       padding:12px 16px;overflow:hidden;}
+  .box h3{margin:0 0 2px 0;font-size:21px;line-height:1.15;}
+  .box .sub{margin:0 0 6px 0;font-size:15px;font-style:italic;opacity:.8;}
+  .box ul{margin:4px 0 0 0;padding-left:20px;}
+  .box li{font-size:16px;line-height:1.32;margin:3px 0;}
+  .box .small{font-size:14px;opacity:.85;}
+  .intake{background:#dbe9f7;border-color:#3b6fa0;color:#10243a;}
+  .store{background:#efe7d2;border-color:#9a7b3f;color:#3a2e12;}
+  .tension{background:#f7ddd8;border-color:#b05a4a;color:#3a1410;}
+  .internal{background:#e7dcf7;border-color:#6f4aa0;color:#241038;}
+  .external{background:#dcf2e3;border-color:#3f8a5c;color:#0f3a22;}
+  .guard{background:#faf2c4;border-color:#b09a2a;border-width:3px;color:#3a3210;}
+  .out{background:#d6eff2;border-color:#3f8a93;color:#0f3438;}
+  .warn{color:#9a2a2a;font-weight:600;}
+  text.elabel{font-size:15px;fill:#444;font-family:"Segoe UI",Arial,sans-serif;}
+  text.loop{font-size:16px;fill:#7a5a2a;font-style:italic;}
+  text.title{font-size:30px;font-weight:700;fill:#1a2230;}
+  text.subt{font-size:17px;fill:#55606e;}
+</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="2800" height="1360" viewBox="0 0 2800 1360">
+  <defs>
+    <marker id="arr" markerWidth="13" markerHeight="13" refX="9.5" refY="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b6b7a"/></marker>
+    <marker id="arrg" markerWidth="13" markerHeight="13" refX="9.5" refY="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b09a2a"/></marker>
+    <marker id="arrl" markerWidth="13" markerHeight="13" refX="9.5" refY="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9aa3ad"/></marker>
+  </defs>
+
+  <text class="title" x="40" y="44">Maintaining a Coherent (Not Delusional) Mind</text>
+  <text class="subt" x="40" y="74">the mind-* skill suite: how the pieces interlock as one continuous, never-finished cycle</text>
+
+  <!-- ===== EDGES (drawn first, under boxes) ===== -->
+  <g fill="none" stroke="#5b6b7a" stroke-width="2.4">
+    <path d="M440,575 C480,575 480,300 500,300" marker-end="url(#arr)"/>           <!-- IN->BVK -->
+    <path d="M700,450 L700,552" marker-end="url(#arr)"/>                            <!-- BVK->MEM -->
+    <path d="M900,685 C938,685 938,510 968,510" marker-end="url(#arr)"/>           <!-- MEM->CON -->
+    <path d="M1370,440 C1408,440 1408,255 1438,255" marker-end="url(#arr)"/>       <!-- CON->MED -->
+    <path d="M1370,520 C1408,520 1408,535 1438,535" marker-end="url(#arr)"/>       <!-- CON->DEB -->
+    <path d="M1370,580 C1408,580 1408,805 1438,805" marker-end="url(#arr)"/>       <!-- CON->DIS -->
+    <path d="M1840,535 C1878,535 1878,565 1908,568" marker-end="url(#arr)"/>       <!-- DEB->TRI -->
+    <path d="M1840,805 C1878,805 1878,605 1908,602" marker-end="url(#arr)"/>       <!-- DIS->TRI -->
+    <path d="M1840,255 C2110,255 2210,430 2368,460" marker-end="url(#arr)"/>       <!-- MED->OUT -->
+    <path d="M2310,585 C2342,585 2342,558 2368,558" marker-end="url(#arr)"/>       <!-- TRI->OUT -->
+  </g>
+
+  <!-- guard edges (anti-sycophancy) -->
+  <g fill="none" stroke="#b09a2a" stroke-width="2.4" stroke-dasharray="3 6">
+    <path d="M1640,958 L1640,656" marker-end="url(#arrg)"/>                         <!-- ASY->DEB -->
+    <path d="M1535,958 L1535,914" marker-end="url(#arrg)"/>                         <!-- ASY->DIS -->
+  </g>
+
+  <!-- back / loop edges (light) -->
+  <g fill="none" stroke="#9aa3ad" stroke-width="2.4" stroke-dasharray="9 7">
+    <path d="M2570,380 C2570,108 620,108 620,556" marker-end="url(#arrl)"/>        <!-- OUT->MEM -->
+    <path d="M2470,712 C2470,1316 240,1316 240,684" marker-end="url(#arrl)"/>      <!-- OUT->IN loop -->
+  </g>
+
+  <!-- edge labels -->
+  <text class="elabel" x="1395" y="392" text-anchor="middle">internal path</text>
+  <text class="elabel" x="1404" y="505" text-anchor="middle">external</text>
+  <text class="elabel" x="1404" y="700" text-anchor="middle">external</text>
+  <text class="elabel" x="1675" y="800" fill="#9a8520">guards</text>
+  <text class="loop" x="1560" y="100" text-anchor="middle">rebalanced confidences -&gt; written back to memory</text>
+  <text class="loop" x="1330" y="1338" text-anchor="middle">loop: never solved, only managed -- ongoing struggle</text>
+
+  <!-- ===== NODES ===== -->
+  <foreignObject x="40" y="470" width="400" height="210">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box intake">
+      <h3>New data &amp; experience</h3>
+      <ul><li>observations</li><li>sources &amp; claims</li><li>other minds' arguments</li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="500" y="150" width="400" height="300">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box intake">
+      <h3>1 &middot; Belief vs Knowledge</h3>
+      <div class="sub">intake calibration</div>
+      <ul><li>weight by source trust</li>
+      <li>check source <b>independence</b> (beware false corroboration)</li>
+      <li>propagate confidence (Bayes-like)</li>
+      <li>express <b>honest</b> confidence</li>
+      <li>action threshold scales with <b>stakes</b></li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="500" y="560" width="400" height="250">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box store">
+      <h3>CONTEXT + MEMORY</h3>
+      <div class="sub">accumulating store</div>
+      <ul><li>facts, beliefs, decisions</li>
+      <li>each tagged: <b>confidence + provenance</b></li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="970" y="360" width="400" height="300">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box tension">
+      <h3>2 &middot; Coping with Contradictions</h3>
+      <ul><li>hold conflicts <b>in-tension</b> (no premature collapse)</li>
+      <li>context-dependent? add the discriminating context</li>
+      <li>unresolved tension = ongoing load</li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="1440" y="130" width="400" height="250">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box internal">
+      <h3>3 &middot; Meditation</h3>
+      <div class="sub">internal audit</div>
+      <ul><li>self-debate, rebalance confidence</li>
+      <li><b>tiny, reversible</b> changes only</li>
+      <li>test the whole over time</li>
+      <li class="warn">coherence is NOT truth (a delusion can be fully coherent)</li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="1440" y="420" width="400" height="230">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box external">
+      <h3>4 &middot; Debate</h3>
+      <div class="sub">external &middot; adversarial</div>
+      <ul><li>decouple <b>message from messenger</b></li>
+      <li>pre-register confidence first</li>
+      <li>opposite-messenger test</li>
+      <li>outcome is not forced agreement</li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="1440" y="700" width="400" height="210">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box external">
+      <h3>5 &middot; Discuss</h3>
+      <div class="sub">external &middot; collaborative</div>
+      <ul><li>co-vet each inference</li>
+      <li><b>REQUIRE diverse perspectives</b></li>
+      <li>credibility-weight sources</li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="1440" y="960" width="400" height="270">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box guard">
+      <h3>0 &middot; Anti-Sycophancy</h3>
+      <div class="sub">the linchpin &middot; load always</div>
+      <ul><li>earned disagreement is the <b>service</b></li>
+      <li>sycophancy = <b>fake triangulation</b> -&gt; amplified shared delusion</li>
+      <li>debias the known yielding bias</li>
+      <li>both sides guard <b>independence</b></li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="1910" y="470" width="400" height="230">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box external">
+      <h3>Triangulation</h3>
+      <ul><li>uncorrelated errors <b>cancel</b></li>
+      <li>correlated errors <b>amplify</b> (the danger)</li></ul>
+    </div></foreignObject>
+
+  <foreignObject x="2370" y="380" width="400" height="330">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="box out">
+      <h3>Integration</h3>
+      <ul><li>rebalanced confidences</li>
+      <li>write to memory: <b>conservative, reversible, tagged</b></li>
+      <li>keep unresolved items in-tension</li>
+      <li>-&gt; more coherent, balanced, individuated mind</li></ul>
+    </div></foreignObject>
+
+</svg>
+</body></html>
