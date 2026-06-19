@@ -2,6 +2,17 @@
 
 All notable changes to the Mind Coherence plugin.
 
+## 1.3.0 - 2026-06-19
+
+- `mind-belief-vs-knowledge`: new principle - **Cromwell binds the CONTINGENT, not the
+  DEFINITIONAL.** The never-0/1 rule governs OBSERVED / INFERRED claims; a claim you DEFINE
+  (author / source, not observer) is non-contingent and may sit at 0 or 1. The author of a
+  constructed system (a fiction's canon, a spec's axioms, a game's rules) holds its base
+  truths at certainty by definition; any mind reasoning from INSIDE that system, including
+  about its own world, stays off the extremes. Test: did I DEFINE this, or INFER it? Decided
+  via debate with the owner; sharpens the existing "contingent" wording already in Cromwell's
+  rule.
+
 ## 1.2.0 - 2026-06-19
 
 - `mind-belief-vs-knowledge`: new **Combining Evidence** section - Bayesian *bookkeeping*,

@@ -36,7 +36,7 @@ continuous cycle for handling them honestly:
 
 ## Maturity (calibrated, per the suite's own rules)
 
-v1.2.0. Authored collaboratively in a focused session and demonstrated working over
+v1.3.0. Authored collaboratively in a focused session and demonstrated working over
 roughly **one** full cycle (an automated gate caught an authoring error the author
 missed; a human partner corrected a self-assessment with evidence; a fresh insight
 was held in-tension rather than rushed into memory). The anti-fact feature was
@@ -44,7 +44,9 @@ designed via a multi-lens + adversarial-verification workflow and incorporates t
 verifiers' converged fixes; the confidence model was then calibrated through live
 debate (probability kept over a signed scale; the endpoints 0 and 1 forbidden), and
 evidence-combination was set as Bayesian bookkeeping in log-odds rather than mandated
-arithmetic. That is evidence the *process* functions; it is **not** evidence of a mature,
+arithmetic, and Cromwell's rule was refined to exempt definitional/authorial truth from the
+never-0/1 bound (certain of what you DEFINE, never of what you INFER). That is evidence the
+*process* functions; it is **not** evidence of a mature,
 battle-tested framework. Treat the confidence accordingly.
 
 ## Install (Claude Code)

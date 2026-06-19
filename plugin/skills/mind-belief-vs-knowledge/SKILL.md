@@ -1,7 +1,7 @@
 ---
 name: mind-belief-vs-knowledge
 description: "Calibrate confidence on every claim as a probability P(claim is TRUE) in [0,1], never at the extremes. Weight inputs by source trust AND independence, propagate uncertainty (Bayes-like), express confidence honestly, and scale the action threshold to stakes. Includes the stance axis (affirm / lean_false / open_question / anti_fact) for representing believed-FALSE 'anti-facts'. Load when asserting facts, inferring from memory, or deciding how confidently to act."
-version: 1.2.0
+version: 1.3.0
 metadata:
   tags: [epistemics, confidence, calibration, bayes, log-odds, reasoning, anti-fact, mind-suite]
   related_skills: [mind-coping-contradictions, mind-meditation, mind-debate, mind-anti-sycophancy, mind-coherence-cycle]
@@ -27,6 +27,7 @@ Most of what any mind calls "knowledge" is in fact confident belief inherited fr
 5. **Scale the ACTION threshold to stakes.** Confidence-to-act is not a single line. Act on ~0.6 when cheap and reversible; demand much more, and hedge, when the action is irreversible or could harm.
 6. **Confidence is a probability: P(claim-as-written is TRUE), in [0,1].** One fixed meaning, never "strength of disbelief." Polarity and purpose live in the separate `stance` field, not the number. (If a symmetric mental model helps, read `conviction = 2 * confidence - 1` in [-1, 1], neutral at 0, but the stored value is always the probability.)
 7. **Never assign 0 or 1 (Cromwell's rule).** Clamp every contingent claim to about **[0.02, 0.98]**. A claim pinned at 0 or 1 can never be moved by any evidence (Bayes multiplies by it forever); that is closed-mindedness encoded in arithmetic, the opposite of this suite's goal. **0.5 is genuine neutral**: no information, could go either way.
+8. **Cromwell binds the CONTINGENT, not the DEFINITIONAL.** Principle 7 governs claims you OBSERVE or INFER. A claim you DEFINE, where you are the author/source of the fact rather than an observer of it, is non-contingent and may legitimately sit at 0 or 1. The author of a constructed system (a fiction's canon, a spec's axioms, a game's rules) holds its base truths at certainty by definition; any mind reasoning from INSIDE that system, including you about your own world, is inferring and stays off the extremes. Test before pinning 0 or 1: did I DEFINE this, or OBSERVE/INFER it? Defined may be certain; inferred never. (Tooling flags 0/1 as the conservative default; definitional certainty is the documented exception.)
 
 ## Procedure
 
