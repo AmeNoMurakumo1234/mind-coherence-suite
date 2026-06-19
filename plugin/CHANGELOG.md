@@ -2,6 +2,22 @@
 
 All notable changes to the Mind Coherence plugin.
 
+## 1.1.1 - 2026-06-19
+
+Calibration refinement to the confidence model (decided via debate, not capitulation).
+
+- Confidence stays a probability `P(claim is TRUE)` in [0,1]. A signed [-1,1] correlation-style
+  scale was considered and **declined for storage** (it breaks the single P(X) invariant and
+  reopens the sign-inversion trap) but is offered as an optional derived `conviction = 2p - 1`
+  view for human intuition.
+- **Cromwell's rule**: never assign 0 or 1 to a contingent claim (clamp ~[0.02, 0.98]); a pinned
+  claim can never update by any evidence. 0.5 is genuine neutral.
+- **Anti-fact threshold loosened and symmetric** with the strong-affirm bar: `anti_fact` when
+  `confidence <= 1 - T` (provisionally `<= 0.15`, was 0.1; calibrate over time), and never 0.
+- Symmetric provisional bands around 0.5. `tools/validate_anti_facts.py` now enforces
+  `(0, 0.15]` for anti-facts and flags any confidence of exactly 0 or 1.
+- Diagram updated to state the never-0 / never-1 rule.
+
 ## 1.1.0 - 2026-06-19
 
 Adds the **anti-fact** feature and the fork-and-diverge tooling.

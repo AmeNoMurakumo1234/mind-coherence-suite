@@ -163,7 +163,7 @@
   <foreignObject x="320" y="1000" width="1060" height="178">
     <div xmlns="http://www.w3.org/1999/xhtml" class="box store" style="border-style:dashed;">
       <h3>Every memory item carries a <span style="color:#9a2a2a">stance</span> <span style="font-weight:400;font-size:14px;font-style:italic;opacity:.75">(new in v1.1)</span></h3>
-      <div class="small" style="margin:0 0 6px 0">confidence is ALWAYS P(claim-as-written is TRUE), one 0-1 axis; <b>stance</b> carries the polarity + purpose a number cannot:</div>
+      <div class="small" style="margin:0 0 6px 0">confidence is ALWAYS P(claim-as-written is TRUE), one 0-1 axis - <b>never 0 or 1</b> (a pinned claim can never update); 0.5 = neutral. <b>stance</b> carries the polarity a number cannot:</div>
       <ul>
       <li><b>affirm</b> = believed true &nbsp;|&nbsp; <b>open_question</b> = no stance (~0.5) &nbsp;|&nbsp; <b>lean_false</b> = soft tilt against</li>
       <li><b class="warn">anti_fact</b> = confidently FALSE, kept ON PURPOSE (myth / trap / debunked); stored <b>truth-forward</b> so a future read cannot inherit the false claim</li>

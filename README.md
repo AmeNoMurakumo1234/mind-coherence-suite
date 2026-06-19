@@ -35,13 +35,15 @@ continuous cycle for handling them honestly:
 
 ## Maturity (calibrated, per the suite's own rules)
 
-v1.1.0. Authored collaboratively in a focused session and demonstrated working over
+v1.1.1. Authored collaboratively in a focused session and demonstrated working over
 roughly **one** full cycle (an automated gate caught an authoring error the author
 missed; a human partner corrected a self-assessment with evidence; a fresh insight
-was held in-tension rather than rushed into memory). The v1.1 anti-fact feature was
+was held in-tension rather than rushed into memory). The anti-fact feature was
 designed via a multi-lens + adversarial-verification workflow and incorporates the
-verifiers' converged fixes. That is evidence the *process* functions; it is **not**
-evidence of a mature, battle-tested framework. Treat the confidence accordingly.
+verifiers' converged fixes; the confidence model was then calibrated through live
+debate (probability kept over a signed scale; the endpoints 0 and 1 forbidden). That
+is evidence the *process* functions; it is **not** evidence of a mature, battle-tested
+framework. Treat the confidence accordingly.
 
 ## Install (Claude Code)
 
