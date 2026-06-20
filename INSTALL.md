@@ -10,14 +10,33 @@ Source of truth: `https://github.com/AmeNoMurakumo1234/mind-coherence-suite`.
    pre-existing memory).
 4. Mind the **scope** (account-global vs per-repo) and the **duplication gotcha** below.
 
+## Quick start (from scratch, terminal CLI)
+If you do not already have the Claude Code CLI:
+1. **Install it** (Node.js 18+): `npm install -g @anthropic-ai/claude-code` (or the native
+   installer / Homebrew / WinGet; see the official [setup guide](https://code.claude.com/docs/en/setup)).
+2. **Start it and log in:** run `claude`; on first use it opens your browser to authenticate your
+   Claude account (Pro / Max / Team / Enterprise or Console) and walks you through a few setup
+   prompts. Full first-run walkthrough: the official [quickstart](https://code.claude.com/docs/en/quickstart).
+3. **Add this marketplace + install the plugin** (inside the `claude` session):
+   ```
+   /plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite
+   /plugin install mind-coherence@mind-coherence-suite
+   ```
+   To skip the TUI, run them from your shell instead:
+   `claude plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite` then
+   `claude plugin install mind-coherence@mind-coherence-suite`.
+
+Already set up? Skip to step 3.
+
 ## Pick your surface
 
 **Desktop app.** The Customize > Plugins GUI is **curated-only**: it installs from the official
 marketplace and CANNOT add a third-party one like this. On desktop, use either:
-- the desktop app's **integrated terminal**, with the CLI commands below, or
+- the **standalone Claude Code CLI** (Quick start above), since the desktop app has no built-in
+  terminal, or
 - a committed **`.claude/settings.json` pin** (see "Pin it in a repo").
 
-There is no `/plugin` slash command outside a terminal. Desktop installs default to account /
+There is no `/plugin` slash command in the desktop app; it is a CLI surface. Desktop installs default to account /
 global scope, and the desktop app keeps plugin state in an app-data location (not the CLI's
 `~/.claude/plugins/`, which stays empty).
 

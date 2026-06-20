@@ -56,18 +56,35 @@ the one-time cleanup runbook, distilled from running this exact audit once on a 
 
 ## Install
 
-This repo is both a marketplace and the plugin it hosts. Pick the surface you use:
+This repo is both a marketplace and the plugin it hosts.
 
-- **Desktop app:** the Customize -> Plugins GUI is curated-only and **cannot add this marketplace**;
-  use the desktop app's **integrated terminal** with the CLI commands below, or pin it in a repo
-  (declarative). Desktop installs default to account / global scope.
-- **Terminal CLI:** `/plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite` then
-  `/plugin install mind-coherence@mind-coherence-suite` (add `--scope user|project|local`).
-- **Pin in a repo (declarative):** add `extraKnownMarketplaces` + `enabledPlugins` to that
-  repo's `.claude/settings.json`.
+**Quick start (terminal CLI):**
+1. Install the Claude Code CLI if you don't have it (Node.js 18+):
+   `npm install -g @anthropic-ai/claude-code` (or the native installer; see the official
+   [setup guide](https://code.claude.com/docs/en/setup)).
+2. Run `claude` and log in. On first use it opens your browser to authenticate your Claude
+   account (Pro/Max/Team/Enterprise or Console) and walks you through a few setup prompts.
+   Full first-run walkthrough: the official [quickstart](https://code.claude.com/docs/en/quickstart).
+3. Add this marketplace and install the plugin:
+   ```
+   /plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite
+   /plugin install mind-coherence@mind-coherence-suite
+   ```
+   (To skip the TUI, run them as shell subcommands instead:
+   `claude plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite` and
+   `claude plugin install mind-coherence@mind-coherence-suite`.)
 
-Skills then invoke as `/mind-<skill>` (e.g. `/mind-onboarding`), or Claude uses them
-automatically for relevant tasks.
+Already set up? Just run step 3.
+
+**Notes by surface:**
+- **Desktop app:** the Customize -> Plugins GUI is curated-only and **cannot add a third-party
+  marketplace**, and the desktop app has **no built-in terminal**, so use the CLI above (or pin via
+  `.claude/settings.json`). A CLI install at user scope DOES then show up in the desktop GUI.
+- **Per-repo on/off:** a user-scope install is active in every project; toggle it per repo with
+  `enabledPlugins` in that repo's `.claude/settings.json` (`"mind-coherence@mind-coherence-suite": false`
+  to turn it off in a repo that uses its own copies).
+
+Skills then invoke as `/mind-<skill>` (e.g. `/mind-onboarding`), or Claude uses them automatically.
 
 **Full workflow, scopes, the duplication gotcha, and uninstall: [INSTALL.md](INSTALL.md).
 Contributing / forking: [CONTRIBUTING.md](CONTRIBUTING.md).** Validate a local checkout with
