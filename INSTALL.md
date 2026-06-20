@@ -98,6 +98,11 @@ A marketplace refresh or `/reload-plugins` ALONE does NOT upgrade an installed p
 the old version until `claude plugin update` runs. Because the plugin pins an explicit `version`,
 `plugin update` reports "already at the latest version" unless that field was bumped.
 
+Because the install is **user scope**, a single `claude plugin update` moves every repo to the new
+version at once, and your per-repo `enabledPlugins` settings persist across the upgrade (a repo you
+disabled stays disabled, just on the new version). The command reports "Restart to apply changes",
+so restart Claude Code (or `/reload-plugins`) to load it in a running session.
+
 To get future versions automatically, enable auto-update for this marketplace: `/plugin` ->
 **Marketplaces** -> select `mind-coherence-suite` -> **Enable auto-update**. New versions then
 install at startup and prompt you to `/reload-plugins`.
