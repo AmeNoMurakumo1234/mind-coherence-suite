@@ -2,6 +2,21 @@
 
 All notable changes to the Mind Coherence plugin.
 
+## 1.5.0 - 2026-06-20
+
+Distribution + docs release. No change to the skills themselves since 1.4.0; the version is
+bumped so consumers can exercise (and we can verify) the update path.
+
+- New tool `tools/vendor_into_repo.py`: vendor the mind-* skills INTO a repo that uses its own
+  skill system and emit a copy-paste prompt for that repo's AI to wire discoverability (no
+  foreign-index editing). The inverse of `reflect_from_local.py`.
+- Docs: corrected the desktop install path (the Customize>Plugins GUI is curated-only; install
+  via the CLI), added a from-scratch Quick start (CLI install + first-run login) linking the
+  official setup/quickstart, a README Contents ToC + References section, and an Updating section.
+  Confirmed namespaced invocation `/mind-coherence:mind-<skill>`.
+- Verified end-to-end against a real consumer: publish -> CLI install (user scope) -> surfaces in
+  the desktop GUI -> per-repo enable/disable (off in the vendored dev/source repo, on in consumers).
+
 ## 1.4.0 - 2026-06-19
 
 - New skill **mind-onboarding**: a one-time runbook for auditing an EXISTING memory corpus to

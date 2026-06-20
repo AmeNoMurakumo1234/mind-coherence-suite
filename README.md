@@ -49,7 +49,7 @@ clean base state when you first adopt the suite (see Onboarding below).
 
 ## Maturity (calibrated, per the suite's own rules)
 
-v1.4.0. Authored collaboratively in a focused session and demonstrated working over
+v1.5.0. Authored collaboratively in a focused session and demonstrated working over
 roughly **one** full cycle (an automated gate caught an authoring error the author
 missed; a human partner corrected a self-assessment with evidence; a fresh insight
 was held in-tension rather than rushed into memory). The anti-fact feature was
@@ -62,7 +62,9 @@ never-0/1 bound (certain of what you DEFINE, never of what you INFER). That is e
 *process* functions; it is **not** evidence of a mature,
 battle-tested framework. Treat the confidence accordingly. v1.4.0 adds **mind-onboarding**,
 the one-time cleanup runbook, distilled from running this exact audit once on a real
-~60-item corpus (one run, not many).
+~60-item corpus (one run, not many). v1.5.0 is a distribution + docs release: the full path
+(publish -> CLI install -> desktop GUI -> per-repo enable/disable -> update) is now verified
+end-to-end against a real consumer repo.
 
 ## Install
 

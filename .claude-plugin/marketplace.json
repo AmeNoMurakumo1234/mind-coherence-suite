@@ -9,7 +9,7 @@
       "name": "mind-coherence",
       "source": "./plugin",
       "description": "Belief-vs-knowledge calibration (with anti-facts), evidence combination as Bayesian bookkeeping, holding contradictions, internal + external audit, and anti-sycophancy, as one continuous coherence cycle. Designed to be forked and diverged, not uniformly adopted.",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": { "name": "Ame No Murakumo" },
       "license": "MIT",
       "keywords": ["epistemics", "anti-sycophancy", "calibration", "anti-fact", "reasoning", "agent-discipline"]

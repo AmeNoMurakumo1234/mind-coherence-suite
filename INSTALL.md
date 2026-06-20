@@ -84,6 +84,21 @@ plugin account-wide for that repo. You will get each skill twice (once as
 `/mind-coherence:mind-*` from the plugin, once from the repo's own loader). **Choose one
 mechanism per repo:** the plugin, or vendored copies, not both.
 
+## Updating to a new version
+This is a third-party marketplace, so **auto-update is OFF by default** (only Anthropic's official
+marketplace auto-updates). When a new version ships, pull it manually:
+1. Refresh the marketplace listing: `/plugin marketplace update mind-coherence-suite`.
+2. Update the plugin: press **Update** on it in Customize > Plugins (or `/plugin` -> Installed),
+   then `/reload-plugins` to apply it in the current session.
+3. Confirm with `claude plugin list` (the version should now read the new number).
+
+To get future versions automatically, enable auto-update for this marketplace: `/plugin` ->
+**Marketplaces** -> select `mind-coherence-suite` -> **Enable auto-update**. New versions then
+install at startup and prompt you to `/reload-plugins`.
+
+The plugin sets an explicit `version`, so consumers only receive an update when that field is
+bumped (not on every commit).
+
 ## Uninstall / disable (it is reversible)
 - Desktop: Customize > Plugins can toggle/uninstall plugins it manages, but adding or removing a CUSTOM marketplace is a terminal op (`/plugin marketplace remove ...`, or remove the `extraKnownMarketplaces` key).
 - CLI: `/plugin`, then Installed, then disable/uninstall (or remove the `enabledPlugins` key).
