@@ -6,8 +6,8 @@ Source of truth: `https://github.com/AmeNoMurakumo1234/mind-coherence-suite`.
 ## TL;DR
 1. Add the marketplace `AmeNoMurakumo1234/mind-coherence-suite`.
 2. Install the `mind-coherence` plugin.
-3. Skills invoke as `/mind-<skill>` (start with `/mind-onboarding` on any
-   pre-existing memory).
+3. Skills invoke as `/mind-coherence:mind-<skill>` (start with `/mind-coherence:mind-onboarding`
+   on any pre-existing memory). Plugin skills are always namespaced by the plugin name.
 4. Mind the **scope** (account-global vs per-repo) and the **duplication gotcha** below.
 
 ## Quick start (from scratch, terminal CLI)
@@ -74,14 +74,14 @@ To limit the plugin to one repo, install at **project** or **local** scope. The 
 installs at account scope by default; if its dialog offers a scope choice, use it.
 
 ## The duplication gotcha (read this)
-Installing the plugin is **purely additive** (each skill is its own `/mind-<skill>` command): it
+Installing the plugin is **purely additive** (each skill is its own `/mind-coherence:mind-<skill>` command): it
 never hides, disables, or reorders your existing skills. The only failure mode is **double-listing**,
 never skill loss.
 
 If a repo ALREADY carries these skills another way - for example it vendored the `mind-*`
 skill bodies into its own skills directory with its own index/gate - do NOT also enable the
 plugin account-wide for that repo. You will get each skill twice (once as
-`/mind-*` from the plugin, once from the repo's own loader). **Choose one
+`/mind-coherence:mind-*` from the plugin, once from the repo's own loader). **Choose one
 mechanism per repo:** the plugin, or vendored copies, not both.
 
 ## Uninstall / disable (it is reversible)

@@ -94,7 +94,9 @@ Already set up? Just run step 3.
   `enabledPlugins` in that repo's `.claude/settings.json` (`"mind-coherence@mind-coherence-suite": false`
   to turn it off in a repo that uses its own copies).
 
-Skills then invoke as `/mind-<skill>` (e.g. `/mind-onboarding`), or Claude uses them automatically.
+Skills then invoke as `/mind-coherence:mind-<skill>` (e.g. `/mind-coherence:mind-onboarding`), or
+Claude uses them automatically. (Plugin skills are always namespaced by the plugin name; the
+repeated `mind-` is just namespace + skill-name. A fork may rename to drop it.)
 
 **Full workflow, scopes, the duplication gotcha, and uninstall: [INSTALL.md](INSTALL.md).
 Contributing / forking: [CONTRIBUTING.md](CONTRIBUTING.md).** Validate a local checkout with

@@ -21,7 +21,7 @@ Load your working copy so edits are live: from the clone, launch `claude --plugi
 (the `plugin/` subdir holds `.claude-plugin/plugin.json`). This **shadows** any globally-installed
 copy for that session, so you can consume the published plugin and develop your fork at once, with
 no conflict and no uninstall. After editing, run `/reload-plugins` (manual; there is no hot-reload)
-and test via `/mind-<skill>`.
+and test via `/mind-coherence:mind-<skill>`.
 
 1. Edit a `SKILL.md` body (or add a new `mind-<name>/SKILL.md`).
 2. Keep it **ASCII-clean.** No em-dash, en-dash, curly quotes, or ellipsis - these are the
