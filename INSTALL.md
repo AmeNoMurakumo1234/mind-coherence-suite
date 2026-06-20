@@ -99,6 +99,9 @@ install at startup and prompt you to `/reload-plugins`.
 The plugin sets an explicit `version`, so consumers only receive an update when that field is
 bumped (not on every commit).
 
+Reference (authoritative): [Discover and install plugins](https://code.claude.com/docs/en/discover-plugins),
+sections "Configure auto-updates" and "Manage installed plugins".
+
 ## Uninstall / disable (it is reversible)
 - Desktop: Customize > Plugins can toggle/uninstall plugins it manages, but adding or removing a CUSTOM marketplace is a terminal op (`/plugin marketplace remove ...`, or remove the `extraKnownMarketplaces` key).
 - CLI: `/plugin`, then Installed, then disable/uninstall (or remove the `enabledPlugins` key).
