@@ -76,6 +76,19 @@ with simple YAML frontmatter; copy the `plugin/skills/` bodies into any harness 
 skill files or system-prompt fragments, and re-wrap the manifest for that harness. See the
 README "Porting" section.
 
+## Vendor into a repo that uses its own skill system
+Some repos load skills from a directory (e.g. `.agents/skills/` with their own index or gate)
+rather than via the Claude Code plugin manager. For those, vendor the skills in and let the
+repo's OWN AI wire discoverability (the script never edits a foreign repo's index):
+```
+python tools/vendor_into_repo.py --target /path/to/repo          # dry-run: preview + the prompt
+python tools/vendor_into_repo.py --target /path/to/repo --apply  # copy skills + write the prompt file
+```
+It copies `plugin/skills/mind-*` into the target's skills dir (auto-detected, or `--skills-dir`)
+and writes `MIND-COHERENCE-INTAKE-PROMPT.md` for you to paste into the repo's AI agent, which then
+intakes the skills using that repo's own convention. The inverse, `reflect_from_local.py`, curates
+a repo's skill edits back upstream for a PR.
+
 ## Your memory stays yours
 This plugin manages the memory SYSTEM; it never collects or ships your memory CONTENT. Your
 beliefs, anti-facts, and notes stay private and local. See `MEMORY-SEPARATION.md`.

@@ -10,8 +10,10 @@ suite improves.
 - `plugin/.claude-plugin/plugin.json` - the plugin manifest.
   `.claude-plugin/marketplace.json` - the marketplace manifest.
 - `plugin/CHANGELOG.md` - per-version changes.
-- `tools/` - `validate_anti_facts.py` (lints the anti-fact format in a memory dir) and
-  `reflect_from_local.py` (curated upstreaming of skill edits from a working copy).
+- `tools/` - `validate_anti_facts.py` (lints the anti-fact format in a memory dir),
+  `reflect_from_local.py` (curated upstreaming of skill edits from a working copy), and
+  `vendor_into_repo.py` (install the skills INTO a repo that uses its own skill system + emit an
+  intake prompt for that repo's AI; the inverse of `reflect_from_local.py`).
 
 ## The edit loop
 
