@@ -7,6 +7,16 @@ coherent-but-false worldview (a "coherent delusion").
 It is a seed, not a standard. Read [CHARTER.md](CHARTER.md) before adopting it:
 uniform adoption is an explicit anti-goal.
 
+## Contents
+- [What it is](#what-it-is) - the seven skills + onboarding
+- [Install / quick start](#install) - CLI install, login, add marketplace, install
+- [Onboarding an existing memory](#onboarding-auditing-your-existing-memory)
+- [Working agreement: memory stays private](#working-agreement-memory-stays-private)
+- [The coherence cycle](#the-coherence-cycle) - the diagram
+- [References (official Claude Code docs)](#references) - ground truth for the plugin system
+- Deeper guides: [INSTALL.md](INSTALL.md) (install, scopes, per-repo on/off, uninstall) -
+  [CONTRIBUTING.md](CONTRIBUTING.md) - [CHARTER.md](CHARTER.md) - [MEMORY-SEPARATION.md](MEMORY-SEPARATION.md)
+
 ## What it is
 
 As an agent's memory grows, contradictions are inevitable. This suite is one
@@ -132,6 +142,13 @@ memory-management *system*, never a store of memory *content*. Your beliefs, ant
 provenance, and notes stay private and outside this repo. See
 [MEMORY-SEPARATION.md](MEMORY-SEPARATION.md); the `.gitignore` and the
 `tools/reflect_from_local.py` guards enforce it.
+
+## References
+
+Claude Code's plugin system is the moving part; trust these over this README:
+- [Setup / install](https://code.claude.com/docs/en/setup) and [Quickstart](https://code.claude.com/docs/en/quickstart) - install the CLI, first-run login.
+- [Discover and install plugins](https://code.claude.com/docs/en/discover-plugins) - the two-step model: adding a marketplace installs NOTHING; you install and enable each plugin (per scope), then `/reload-plugins`.
+- [Plugin settings](https://code.claude.com/docs/en/settings) - `extraKnownMarketplaces` + `enabledPlugins` for per-repo configuration.
 
 ## Lineage
 
