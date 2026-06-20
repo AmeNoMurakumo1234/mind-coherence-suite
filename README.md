@@ -54,23 +54,24 @@ battle-tested framework. Treat the confidence accordingly. v1.4.0 adds **mind-on
 the one-time cleanup runbook, distilled from running this exact audit once on a real
 ~60-item corpus (one run, not many).
 
-## Install (Claude Code)
+## Install
 
-This repo is both a marketplace and the plugin it hosts.
+This repo is both a marketplace and the plugin it hosts. Pick the surface you use:
 
-```
-/plugin marketplace add <git-host>/<owner>/<repo>     # or a local path to this dir
-/plugin install mind-coherence@mind-coherence-suite
-```
+- **Desktop app:** the Customize -> Plugins GUI is curated-only and **cannot add this marketplace**;
+  use the desktop app's **integrated terminal** with the CLI commands below, or pin it in a repo
+  (declarative). Desktop installs default to account / global scope.
+- **Terminal CLI:** `/plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite` then
+  `/plugin install mind-coherence@mind-coherence-suite` (add `--scope user|project|local`).
+- **Pin in a repo (declarative):** add `extraKnownMarketplaces` + `enabledPlugins` to that
+  repo's `.claude/settings.json`.
 
-Validate locally before publishing:
+Skills then invoke as `/mind-coherence:mind-<skill>` (e.g. `/mind-coherence:mind-onboarding`).
+The doubled `mind-` is cosmetic; a fork may drop the prefix.
 
-```
-claude plugin validate ./plugin
-```
-
-(Skills invoke as `/mind-coherence:mind-<skill>`. The doubled `mind-` is cosmetic;
-a fork may rename the skills to drop the prefix.)
+**Full workflow, scopes, the duplication gotcha, and uninstall: [INSTALL.md](INSTALL.md).
+Contributing / forking: [CONTRIBUTING.md](CONTRIBUTING.md).** Validate a local checkout with
+`claude plugin validate ./plugin`.
 
 ## Porting to other agentic harnesses
 
