@@ -66,8 +66,8 @@ This repo is both a marketplace and the plugin it hosts. Pick the surface you us
 - **Pin in a repo (declarative):** add `extraKnownMarketplaces` + `enabledPlugins` to that
   repo's `.claude/settings.json`.
 
-Skills then invoke as `/mind-coherence:mind-<skill>` (e.g. `/mind-coherence:mind-onboarding`).
-The doubled `mind-` is cosmetic; a fork may drop the prefix.
+Skills then invoke as `/mind-<skill>` (e.g. `/mind-onboarding`), or Claude uses them
+automatically for relevant tasks.
 
 **Full workflow, scopes, the duplication gotcha, and uninstall: [INSTALL.md](INSTALL.md).
 Contributing / forking: [CONTRIBUTING.md](CONTRIBUTING.md).** Validate a local checkout with
