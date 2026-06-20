@@ -77,16 +77,22 @@ This repo is both a marketplace and the plugin it hosts.
 2. Run `claude` and log in. On first use it opens your browser to authenticate your Claude
    account (Pro/Max/Team/Enterprise or Console) and walks you through a few setup prompts.
    Full first-run walkthrough: the official [quickstart](https://code.claude.com/docs/en/quickstart).
-3. Add this marketplace and install the plugin:
+3. Add this marketplace and install the plugin (any terminal: PowerShell / cmd / bash):
    ```
-   /plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite
-   /plugin install mind-coherence@mind-coherence-suite
+   claude plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite
+   claude plugin install mind-coherence@mind-coherence-suite
    ```
-   (To skip the TUI, run them as shell subcommands instead:
-   `claude plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite` and
-   `claude plugin install mind-coherence@mind-coherence-suite`.)
+   (In a running `claude` session, use the slash forms instead: `/plugin marketplace add ...` +
+   `/plugin install ...`.)
 
 Already set up? Just run step 3.
+
+**Updating later** (any terminal):
+```
+claude plugin update mind-coherence@mind-coherence-suite
+```
+then restart Claude Code. Third-party marketplaces don't auto-update, full steps in
+[INSTALL.md](INSTALL.md#updating-to-a-new-version).
 
 **Notes by surface:**
 - **Desktop app:** manage plugins from **+ -> Plugins** (the browser lists plugins from your

@@ -17,14 +17,13 @@ If you do not already have the Claude Code CLI:
 2. **Start it and log in:** run `claude`; on first use it opens your browser to authenticate your
    Claude account (Pro / Max / Team / Enterprise or Console) and walks you through a few setup
    prompts. Full first-run walkthrough: the official [quickstart](https://code.claude.com/docs/en/quickstart).
-3. **Add this marketplace + install the plugin** (inside the `claude` session):
+3. **Add this marketplace + install the plugin.** From any terminal (PowerShell / cmd / bash):
    ```
-   /plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite
-   /plugin install mind-coherence@mind-coherence-suite
+   claude plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite
+   claude plugin install mind-coherence@mind-coherence-suite
    ```
-   To skip the TUI, run them from your shell instead:
-   `claude plugin marketplace add AmeNoMurakumo1234/mind-coherence-suite` then
-   `claude plugin install mind-coherence@mind-coherence-suite`.
+   (Inside a running `claude` session, use the slash forms instead: `/plugin marketplace add ...`
+   then `/plugin install ...`.)
 
 Already set up? Skip to step 3.
 
@@ -85,14 +84,15 @@ plugin account-wide for that repo. You will get each skill twice (once as
 mechanism per repo:** the plugin, or vendored copies, not both.
 
 ## Updating to a new version
-This is a third-party marketplace, so **auto-update is OFF by default** (only Anthropic's official
-marketplace auto-updates). When a new version ships, upgrade it manually:
-1. Refresh the marketplace catalog: `claude plugin marketplace update mind-coherence-suite`.
-2. **Upgrade the installed plugin** (the step that actually moves the version):
-   `claude plugin update mind-coherence@mind-coherence-suite` (or `/plugin update mind-coherence@mind-coherence-suite`
-   in a session, or the **Update** button in the desktop GUI).
-3. Apply it in a running session with `/reload-plugins`, or restart Claude Code.
-4. Confirm: `claude plugin list` shows the new version.
+Third-party marketplaces don't auto-update by default, so upgrade manually. Run these in any
+terminal (PowerShell, cmd, bash, or the desktop Code-tab terminal):
+```
+claude plugin marketplace update mind-coherence-suite     # refresh the catalog
+claude plugin update mind-coherence@mind-coherence-suite  # move the installed version
+claude plugin list                                        # confirm the new version
+```
+Then **restart Claude Code** (or run `/reload-plugins` in a running session) to load it; the update
+reports "Restart to apply changes". (Desktop GUI alternative: the **Update** button on the plugin.)
 
 A marketplace refresh or `/reload-plugins` ALONE does NOT upgrade an installed plugin - it stays on
 the old version until `claude plugin update` runs. Because the plugin pins an explicit `version`,
