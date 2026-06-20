@@ -89,9 +89,11 @@ This repo is both a marketplace and the plugin it hosts.
 Already set up? Just run step 3.
 
 **Notes by surface:**
-- **Desktop app:** the Customize -> Plugins GUI is curated-only and **cannot add a third-party
-  marketplace**, and the desktop app has **no built-in terminal**, so use the CLI above (or pin via
-  `.claude/settings.json`). A CLI install at user scope DOES then show up in the desktop GUI.
+- **Desktop app:** manage plugins from **+ -> Plugins** (the browser lists plugins from your
+  *configured* marketplaces, including the official one). Recent builds (**Claude Desktop v1.2581.0+**)
+  also have a Code-tab **integrated terminal** (Views menu / `Ctrl+\``) for the CLI commands above.
+  Adding a *new custom* marketplace may still need the CLI, and older builds lack the terminal, so if
+  in doubt use the standalone CLI. A CLI install at user scope then shows up in the desktop GUI.
 - **Per-repo on/off:** a user-scope install is active in every project; toggle it per repo with
   `enabledPlugins` in that repo's `.claude/settings.json` (`"mind-coherence@mind-coherence-suite": false`
   to turn it off in a repo that uses its own copies).

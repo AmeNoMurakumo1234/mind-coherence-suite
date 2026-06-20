@@ -30,15 +30,15 @@ Already set up? Skip to step 3.
 
 ## Pick your surface
 
-**Desktop app.** The Customize > Plugins GUI is **curated-only**: it installs from the official
-marketplace and CANNOT add a third-party one like this. On desktop, use either:
-- the **standalone Claude Code CLI** (Quick start above), since the desktop app has no built-in
-  terminal, or
-- a committed **`.claude/settings.json` pin** (see "Pin it in a repo").
+**Desktop app.** Manage plugins from the **+ button -> Plugins** (the browser lists plugins from
+your *configured* marketplaces, including the official Anthropic one; **Manage plugins** to
+enable / disable / uninstall). Recent builds (**Claude Desktop v1.2581.0+**) also include a Code-tab
+**integrated terminal** (Views menu, or `Ctrl+\``) where you can run the CLI commands above.
 
-There is no `/plugin` slash command in the desktop app; it is a CLI surface. Desktop installs default to account /
-global scope, and the desktop app keeps plugin state in an app-data location (not the CLI's
-`~/.claude/plugins/`, which stays empty).
+Caveats (verify against your build): adding a *new custom* (non-official) marketplace may require the
+CLI / terminal rather than the GUI, and **older desktop builds lack the integrated terminal entirely**
+(update the app via Help -> Check for Updates, or install the standalone CLI). Desktop installs
+default to account / global scope.
 
 **Terminal CLI.**
 ```
