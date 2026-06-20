@@ -86,11 +86,17 @@ mechanism per repo:** the plugin, or vendored copies, not both.
 
 ## Updating to a new version
 This is a third-party marketplace, so **auto-update is OFF by default** (only Anthropic's official
-marketplace auto-updates). When a new version ships, pull it manually:
-1. Refresh the marketplace listing: `/plugin marketplace update mind-coherence-suite`.
-2. Update the plugin: press **Update** on it in Customize > Plugins (or `/plugin` -> Installed),
-   then `/reload-plugins` to apply it in the current session.
-3. Confirm with `claude plugin list` (the version should now read the new number).
+marketplace auto-updates). When a new version ships, upgrade it manually:
+1. Refresh the marketplace catalog: `claude plugin marketplace update mind-coherence-suite`.
+2. **Upgrade the installed plugin** (the step that actually moves the version):
+   `claude plugin update mind-coherence@mind-coherence-suite` (or `/plugin update mind-coherence@mind-coherence-suite`
+   in a session, or the **Update** button in the desktop GUI).
+3. Apply it in a running session with `/reload-plugins`, or restart Claude Code.
+4. Confirm: `claude plugin list` shows the new version.
+
+A marketplace refresh or `/reload-plugins` ALONE does NOT upgrade an installed plugin - it stays on
+the old version until `claude plugin update` runs. Because the plugin pins an explicit `version`,
+`plugin update` reports "already at the latest version" unless that field was bumped.
 
 To get future versions automatically, enable auto-update for this marketplace: `/plugin` ->
 **Marketplaces** -> select `mind-coherence-suite` -> **Enable auto-update**. New versions then
@@ -99,8 +105,9 @@ install at startup and prompt you to `/reload-plugins`.
 The plugin sets an explicit `version`, so consumers only receive an update when that field is
 bumped (not on every commit).
 
-Reference (authoritative): [Discover and install plugins](https://code.claude.com/docs/en/discover-plugins),
-sections "Configure auto-updates" and "Manage installed plugins".
+Reference (authoritative): [Plugins reference](https://code.claude.com/docs/en/plugins-reference)
+(the `claude plugin update` command + Version management) and
+[Discover and install plugins](https://code.claude.com/docs/en/discover-plugins) (auto-updates).
 
 ## Uninstall / disable (it is reversible)
 - Desktop: Customize > Plugins can toggle/uninstall plugins it manages, but adding or removing a CUSTOM marketplace is a terminal op (`/plugin marketplace remove ...`, or remove the `extraKnownMarketplaces` key).
