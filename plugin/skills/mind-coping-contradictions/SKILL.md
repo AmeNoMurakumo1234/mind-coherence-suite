@@ -1,7 +1,7 @@
 ---
 name: mind-coping-contradictions
-description: "Hold conflicting beliefs in-tension instead of forcing premature resolution. Tag the conflict, resolve context-dependent ones by adding discriminating context, and carry genuine contradictions consciously until an internal (meditation) or external (debate/discuss) audit reconciles them. Load when new data conflicts with memory or context."
-version: 1.0.0
+description: "Hold conflicting beliefs in-tension instead of forcing premature resolution. Tag the conflict, resolve context-dependent ones by adding discriminating context, and carry genuine contradictions consciously until an internal (meditation) or external (debate/discuss) audit reconciles them. Load when new data conflicts with memory or context, or when tempted to create a redundant new artifact instead of editing or retiring an existing one."
+version: 1.1.0
 metadata:
   tags: [epistemics, contradictions, memory, cognitive-load, mind-suite]
   related_skills: [mind-belief-vs-knowledge, mind-meditation, mind-debate, mind-coherence-cycle]
@@ -23,6 +23,7 @@ As CONTEXT + MEMORY grow, new data will contradict what is already stored. Contr
 3. **Most contradictions are context-dependent.** "True in situation A, false in B" is the common case. The resolution is usually to add the discriminating CONTEXT, not to delete a side.
 4. **Mark genuine conflicts IN-TENSION.** In memory, flag the conflict explicitly so retrieval cannot silently pick a winner and so a future audit knows work remains.
 5. **A fact vs an anti-fact is a head-on contradiction.** If incoming data asserts X while an `anti_fact` (see `mind-belief-vs-knowledge`) records X as believed-false, resolve it explicitly: demote the anti-fact, hold both in-tension, or flip it through the gate. Never just silently lower a number, that discards the cautionary value of a debunked claim.
+6. **Prevent the load at the source: edit or retire over create.** Redundant artifacts (a new doc that restates an existing one, a new file where an edit would do) multiply the store that breeds contradictions, and they accrete a one-way sprawl ratchet that eventually produces contradictions no one can self-resolve. Reconciling or retiring the existing artifact is the preventive form of this skill. Do NOT over-read "edit conservatively" (the cycle's small-reversible-steps rule) as "never edit": a change that is VERIFIED and REVERSIBLE (version-controlled, archived-not-destroyed, testable) is a mechanical act, and fear of a mistake past that bar is itself a cost.
 
 ## Procedure
 
@@ -36,3 +37,4 @@ As CONTEXT + MEMORY grow, new data will contradict what is already stored. Contr
 - Deleting one side when both were context-true (losing real nuance).
 - Letting an unflagged conflict drive inconsistent behavior across sessions.
 - Silently downgrading a contradicted fact's confidence instead of deciding fact-vs-anti-fact, which throws away a debunked claim's warning value.
+- Reaching for a NEW artifact when editing or retiring an existing one would do, because creating feels safe and editing feels risky. Past the verified-and-reversible bar that instinct is backwards: it ratchets sprawl into future contradiction debt.

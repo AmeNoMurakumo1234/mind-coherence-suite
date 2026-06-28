@@ -1,6 +1,6 @@
 ---
 name: mind-coherence-cycle
-description: "Overview and map of how the mind-* suite interlocks into a continuous cycle that keeps a growing CONTEXT+MEMORY coherent but not delusional. Covers intake calibration, holding contradictions, internal (meditation) vs external (debate/discuss) audit, triangulation, the anti-sycophancy linchpin, and the never-solved feedback loop. See coherence-cycle.png. Load to understand the suite as a whole."
+description: "Overview and map of how the mind-* suite interlocks into a continuous cycle that keeps a growing CONTEXT+MEMORY coherent but not delusional. Covers intake calibration, holding contradictions, internal (meditation) vs external (debate/discuss) audit, triangulation, the anti-sycophancy linchpin, and the never-solved feedback loop. See coherence-cycle.png. Load when onboarding the suite or deciding which member skill applies to an epistemic situation."
 version: 1.0.0
 metadata:
   tags: [epistemics, overview, coherence, memory, mind-suite]
@@ -25,6 +25,10 @@ The `mind-*` suite is a single process for keeping an accumulating CONTEXT + MEM
 4. **Guard - `mind-anti-sycophancy` (linchpin).** External audit only works if the minds stay independent. Sycophancy manufactures fake triangulation and amplifies error into shared delusion, so earned disagreement is the service.
 5. **Integration.** Rebalanced confidences write back to MEMORY conservatively and reversibly; unresolved items stay flagged IN-TENSION.
 6. **Loop.** Back to intake. There is no end-state of a self-certified-correct mind; the cycle is permanent, manageable-not-solvable, ongoing struggle.
+
+The scheduled real-world instance of one lap is the **wakeup memory-audit** every agent runs at
+session-open: load memory, reconcile vs self + shared canon + current reality, fix reversals, hold
+tensions IN-TENSION. The step-by-step runbook lives in `mind-meditation` ("Wakeup memory-audit").
 
 ## Why It Is Only Manageable, Never Solved
 
